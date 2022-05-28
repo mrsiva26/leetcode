@@ -28,7 +28,7 @@ class Solution {
             }
         }
         
-        Map<Integer, Integer> map = new TreeMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         
         for(int i=0; i<arr.length; i++) {
             if (!map.containsKey(arr[i][0])) {
@@ -43,6 +43,8 @@ class Solution {
         for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
             result[count++] = new int[] {entry.getKey(), entry.getValue()};
         }
+        
+        Arrays.sort(result, (arr1,arr2) -> (arr1[0]-arr2[0]));
         
         return result;
     }
