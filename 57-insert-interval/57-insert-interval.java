@@ -23,9 +23,11 @@ class Solution {
                 prev[1] = Math.max(prev[1], curr[1]);
                 curr[0] = prev[0];
                 curr[1] = prev[1];
-            } else {
-                //continue;
-            }
+            } 
+            
+            // else {
+            //     continue;
+            // }
         }
         
         Map<Integer, Integer> map = new HashMap<>();
