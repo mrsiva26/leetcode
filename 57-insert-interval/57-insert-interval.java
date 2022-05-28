@@ -3,15 +3,15 @@ class Solution {
         
         List<int[]> list = new ArrayList<int[]> ();
         
+        list.add(newInterval);
         for(int i=0; i<intervals.length; i++) {
             list.add(intervals[i]);
         }
         
-        list.add(newInterval);
-        
         Collections.sort(list, (arr1,arr2) -> (arr1[0]-arr2[0]));
         
         int[][] arr = list.toArray(new int[list.size()][2]);
+        list.clear();
         
         for(int i=1; i<arr.length; i++) {
             
